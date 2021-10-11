@@ -6,7 +6,7 @@ import pandas as pd
 def Onset_detection():
     return ("Onset Information")
 
-def Spec_Crust_Tonalness():
+def Spec_Crest_Tonalness():
     return("Give tonal vs ATONAL between inter onsets")
 
 def f0_detection():
