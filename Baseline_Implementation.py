@@ -7,6 +7,7 @@ def Onset_detection():
     return ("Onset Information")
 
 def Spec_Crest_Tonalness():
+    #Add rms also to help detecting offsets
     return("Give tonal vs ATONAL between inter onsets")
 
 def f0_detection():
