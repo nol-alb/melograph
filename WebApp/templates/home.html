@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<style>
+  .right {
+    position: absolute;
+    right: 0px;
+    width: 300px;
+    border: 3px solid #73AD21;
+    padding: 10px;
+  }
+  </style>
+   <div class="jumbotron text-center">
+    <h1>Welcome To MeloGraph</h1>
+    <p class="lead"> This is a WebBased Melody Visualization tool, developed by Noel Alben, Rhythm Jain and Thiago R Roque as a semester project for MUSI-6201 (Audio Content Analysis)
+        <form action="\melograph">
+       
+        <p><input type="submit" class="btn btn-primary" value="Launch Application"></p>
+    </form>
+    </p>
+{% endblock %}
