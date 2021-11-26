@@ -13,7 +13,8 @@ if __name__ == '__main__':
 	onset_samples = OnsetDetection()
 	midi_collection = PitchDetection()
 	graph = Visualization()
-
+	graph.make_diGraph()
+	graph.save_graphXML()
 	#write file to images/ directory
 
 
