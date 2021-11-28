@@ -100,7 +100,7 @@ def HPSS(x,fs):
     scale_factor= x.size/xrec.size
     return Zxx_perc,xrec,scale_factor
 
-def Novelty(x,fs):
+def Novelty_HPSS_Spectral(x,fs):
      freq,time,scale_factor = HPSS(x,fs)
      Y1 = np.log(1 + 100 * np.abs(freq)) #  Logarithmic Compression for smoothning
      Y_diff = np.diff(Y1, n=1)
@@ -109,6 +109,7 @@ def Novelty(x,fs):
      nov = np.concatenate((nov, np.array([0])))
      nov = nov/max(nov) 
      return nov,scale_factor
+
 
 """
 Adaptive thresholding peak detection 
@@ -127,7 +128,7 @@ def peak_picking_adaptive_threshold(x, median_len=16, offset_rel=0.05, sigma=4.0
 
 def Onset_detection(path):
     fs,x = ToolReadAudio(path)
-    nov,scale_factor = Novelty(x,fs)
+    nov,scale_factor = Novelty_HPSS_Spectral(x,fs)
     peaks = peak_picking_adaptive_threshold(x, median_len=16, offset_rel=0.05, sigma=4.0)
     peaks = np.int32(np.around(peaks*scale_factor*256*2))
     return peaks
