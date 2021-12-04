@@ -129,7 +129,7 @@ def track_pitch_cmndf(x, blockSize, hopSize, fs, thresholdDb):
         if comparison[i] < 40:
             comparison[i] = comparison[i+1]
     # Smoothing and compare to eliminate some occasional octave errors
-    smooth_over = 4
+    smooth_over = 10
     comparison = np.convolve(comparison, np.ones(smooth_over * 2 + 1) / (smooth_over * 2 + 1), mode='valid')
     for i in range(smooth_over, _f0.shape[0] - smooth_over):
         if abs(_f0[i]/2-comparison[i - smooth_over]) < abs(_f0[i] - comparison[i - smooth_over]):
@@ -209,6 +209,11 @@ def run_evaluation(path):
         groundtruthInHz = np.concatenate((groundtruthInHz, txt_read[:, 2].T), 0)
     return eval_pitchtrack_v2(estimateInHz, groundtruthInHz)
 
+def run_on_file(path):
+    fs, x = ToolReadAudio(path)
+    f0, timeInSec = track_pitch_cmndf(x, 1024, 512, fs, -20)
+    plt.plot(f0)
+    return [f0,timeInSec]
 
 # just for testing
 # blockSize = 1024
@@ -247,6 +252,14 @@ def run_evaluation(path):
 
 # just for testing
 if __name__ == '__main__':
-    run_evaluation('trainData')
-
+    path = "C:/Users/thiag/Documents/Github/melograph/Audios/WholeToneStrings.wav"
+    blockSize = 1024
+    hopSize = 512
+    thresholdDb = -40
+    # run_evaluation('C:/Users/thiag/Documents/Github/melograph/trainData')
+    [f0,timeInSec] = run_on_file("C:/Users/thiag/Documents/Github/melograph/Audios/WholeToneStrings.wav")
+    # plt.plot(f0)
+    
+    fs, x = ToolReadAudio(path)
+    
 # EOF
