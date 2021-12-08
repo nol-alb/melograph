@@ -129,8 +129,9 @@ def peak_picking_adaptive_threshold(x, median_len=16, offset_rel=0.05, sigma=4.0
 def Onset_detection(path):
     fs,x = ToolReadAudio(path)
     nov,scale_factor = Novelty_HPSS_Spectral(x,fs)
-    peaks = peak_picking_adaptive_threshold(x, median_len=16, offset_rel=0.05, sigma=4.0)
-    peaks = np.int32(np.around(peaks*scale_factor*256*2))
+    peaks = peak_picking_adaptive_threshold(nov, median_len=16, offset_rel=0.05, sigma=4.0)
+    scale_factor = x.size/nov.size
+    peaks = np.int32(np.around(peaks*scale_factor))
     return peaks
 
 def visualization(x,peaks):
