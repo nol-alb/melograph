@@ -83,7 +83,6 @@ def interpolate(y, padding):
 
 def get_f0_from_nccf(r, n, fs):
     nccf = r/n
-    
     peakind_nccf, _ = signal.find_peaks(nccf, distance=50, prominence=10)
     if (peakind_nccf.shape[0] != 0):
         highPeakind_nccf = np.argmax(nccf[peakind_nccf])
@@ -103,7 +102,7 @@ def get_f0_from_nccf(r, n, fs):
         return 0
 
 def HPSS(x,fs):
-    f, t, Zxx = signal.spectrogram(x, fs,'hann', nperseg=1024)
+    f, t, Zxx = signal.spectrogram(x, fs,window=('hann'), nperseg=1024)
     win_harm =31 #Horizontal
     win_perc = 31 #Vertical
     harm = np.empty_like(Zxx)
@@ -151,8 +150,10 @@ def peak_picking_adaptive_threshold(x, median_len=16, offset_rel=0.05, sigma=4.0
 def Onset_detection(path):
     fs,x = ToolReadAudio(path)
     nov,scale_factor = Novelty_HPSS_Spectral(x,fs)
-    peaks = peak_picking_adaptive_threshold(x, median_len=16, offset_rel=0.05, sigma=4.0)
-    peaks = np.int32(np.around(peaks*scale_factor*256*2))
+    peaks = peak_picking_adaptive_threshold(nov, median_len=16, offset_rel=0.05, sigma=4.0)
+    # peaks = np.int32(np.around(peaks*scale_factor*256*2))
+    scale_factor = x.size/nov.size
+    peaks = np.int32(np.around(peaks*scale_factor))
     return peaks
 
 def visualization(x,peaks):
@@ -166,8 +167,8 @@ def extract_rms_chunk(x):
 
 def track_pitch_nccf(x,blockSize,hopSize,fs, thresholdDb): 
     
-    [xb, timeInSec] = block_audio(x,blockSize,hopSize,fs)
-    f0 = np.zeros(len(timeInSec))    
+    xb = block_audio(x,blockSize,hopSize,fs)
+    f0 = np.zeros(xb.shape[0])    
     for idx, val in enumerate(xb):
         
         mod_val = mod_acf2(val) 
@@ -191,7 +192,7 @@ def track_pitch_nccf(x,blockSize,hopSize,fs, thresholdDb):
         if abs(_f0[i]*2-comparison[i - smooth_over]) < abs(_f0[i] - comparison[i - smooth_over]):
             _f0[i] = _f0[i]*2
                 
-    return [_f0]
+    return _f0
 
 def freq2MIDI(f0,a0):
     f0_ = np.copy(f0)
@@ -203,15 +204,15 @@ def freq2MIDI(f0,a0):
     pitchInMIDI = np.round(69 + 12 * np.log2(f0_/a0))
     return pitchInMIDI
 
-def onset_note_tracking(x, o, fs, rmsThreshold):
-    smallBlockSize = 1024
-    smallHopSize = 512
+def onset_note_tracking(x, oInBlocks, fs, rmsThreshold):
+    smallBlockSize = 512
+    smallHopSize = 128
     a0 = 440
-    nChunks = o.shape[0]
+    nChunks = oInBlocks.shape[0]
     f0 = np.zeros(nChunks)
     for i in range(1, nChunks):
-        initPos = o[i-1]
-        endPos = o[i]
+        initPos = oInBlocks[i-1]
+        endPos = oInBlocks[i]
         rms = extract_rms_chunk(x[initPos:endPos])
         if rms > rmsThreshold:
             f0_temp = track_pitch_nccf(x[initPos:endPos], smallBlockSize, smallHopSize, fs)
