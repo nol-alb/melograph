@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>MELOGRAPH</title>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	</head>
-	<body>
-		{% include 'includes/_navbar.html' %}
-		<div class="container">
-			{% block body %}{% endblock %}
-	    </div>
-		<script src ="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
-		</script>
-	</body>
+
+<head>
+    <meta charset="utf-8">
+    <title>MELOGRAPH</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.20.0/cytoscape.min.js"></script>
+    <style>
+    #cy {
+        width: 300px;
+        height: 300px;
+        display: block;
+    }
+    </style>
+</head>
+
+<body>
+    {% include 'includes/_navbar.html' %}
+    <div class="container">
+        {% block body %}{% endblock %}
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+    </script>
+</body>
+
 </html>

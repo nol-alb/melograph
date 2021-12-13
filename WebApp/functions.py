@@ -196,3 +196,5 @@ def onset_note_tracking(x, o, fs, rmsThreshold):
             f0[i-1] = np.median(f0_temp)
     midiNoteArray = freq2MIDI(f0,a0)
     return midiNoteArray
+
+

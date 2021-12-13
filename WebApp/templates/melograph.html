@@ -127,21 +127,18 @@
             </div>
 
         </div>
-        <div class="col-md-12" style="text-align:center;">
-            <!-- <a class="btn btn-primary">
-            <form method="post">
-               <input type="submit" value="Analyze" >
-            </form>
-            </a> -->
-        </div>
+        
         <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
        <script src="/static/js/app.js"></script>  
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-        <a class="btn btn-primary">
-               <input type="submit" href="/Analyze" value="Analyze The Audio" >
+        <div class="col-md-12" style="text-align:center;">
+            <a class="btn btn-primary">
+            <form action ="/analysis" method="POST" >
+               <input type="submit" value="Analyze" >
             </form>
             </a>
+        </div>
     </body>
 </html>
 
