@@ -1,0 +1,4 @@
+Name,Precision,Recall,F1,OverlapRatio
+chanson_triste1.txt,0.854839,0.80303,0.828125,0.886349
+chanson_triste2.txt,0.792,0.75,0.770428,0.860365
+Mean,0.8234195,0.776515,0.7992765,0.873357

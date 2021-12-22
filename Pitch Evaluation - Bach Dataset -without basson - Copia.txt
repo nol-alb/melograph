@@ -1,0 +1,39 @@
+RMS error for 01_AchGottundHerr_clarinet.RESYN.csv is 76.42 cents. False positive is 7.126949%. False negtative is 0.000000%.
+RMS error for 01_AchGottundHerr_saxphone.RESYN.csv is 97.35 cents. False positive is 7.994186%. False negtative is 0.000000%.
+RMS error for 01_AchGottundHerr_violin.RESYN.csv is 168.45 cents. False positive is 9.207161%. False negtative is 0.000000%.
+RMS error for 02_AchLiebenChristen_clarinet.RESYN.csv is 84.10 cents. False positive is 11.428571%. False negtative is 0.000000%.
+RMS error for 02_AchLiebenChristen_saxphone.RESYN.csv is 120.32 cents. False positive is 8.871662%. False negtative is 0.000000%.
+RMS error for 02_AchLiebenChristen_violin.RESYN.csv is 173.20 cents. False positive is 13.210040%. False negtative is 0.000000%.
+RMS error for 03_ChristederdubistTagundLicht_clarinet.RESYN.csv is 84.65 cents. False positive is 9.564165%. False negtative is 0.000000%.
+RMS error for 03_ChristederdubistTagundLicht_saxphone.RESYN.csv is 81.08 cents. False positive is 7.633588%. False negtative is 0.000000%.
+RMS error for 03_ChristederdubistTagundLicht_violin.RESYN.csv is 107.82 cents. False positive is 12.602740%. False negtative is 0.023883%.
+RMS error for 04_ChristeDuBeistand_clarinet.RESYN.csv is 93.06 cents. False positive is 9.096733%. False negtative is 0.000000%.
+RMS error for 04_ChristeDuBeistand_saxphone.RESYN.csv is 111.40 cents. False positive is 6.311044%. False negtative is 0.000000%.
+RMS error for 04_ChristeDuBeistand_violin.RESYN.csv is 107.40 cents. False positive is 10.321489%. False negtative is 0.000000%.
+RMS error for 05_DieNacht_clarinet.RESYN.csv is 85.93 cents. False positive is 6.565064%. False negtative is 0.000000%.
+RMS error for 05_DieNacht_saxphone.RESYN.csv is 95.23 cents. False positive is 7.327001%. False negtative is 0.000000%.
+RMS error for 05_DieNacht_violin.RESYN.csv is 130.14 cents. False positive is 14.199759%. False negtative is 0.000000%.
+RMS error for 06_DieSonne_clarinet.RESYN.csv is 104.62 cents. False positive is 10.230548%. False negtative is 0.000000%.
+RMS error for 06_DieSonne_saxphone.RESYN.csv is 85.20 cents. False positive is 8.077994%. False negtative is 0.000000%.
+RMS error for 06_DieSonne_violin.RESYN.csv is 140.65 cents. False positive is 15.851272%. False negtative is 0.000000%.
+RMS error for 07_HerrGott_clarinet.RESYN.csv is 65.94 cents. False positive is 7.701564%. False negtative is 0.000000%.
+RMS error for 07_HerrGott_saxphone.RESYN.csv is 77.39 cents. False positive is 5.385330%. False negtative is 0.000000%.
+RMS error for 07_HerrGott_violin.RESYN.csv is 201.22 cents. False positive is 6.436234%. False negtative is 0.000000%.
+RMS error for 08_FuerDeinenThron_clarinet.RESYN.csv is 85.97 cents. False positive is 7.686084%. False negtative is 0.000000%.
+RMS error for 08_FuerDeinenThron_saxphone.RESYN.csv is 73.95 cents. False positive is 5.911330%. False negtative is 0.000000%.
+RMS error for 08_FuerDeinenThron_violin.RESYN.csv is 280.54 cents. False positive is 10.497981%. False negtative is 0.000000%.
+RMS error for 09_Jesus_clarinet.RESYN.csv is 86.09 cents. False positive is 8.515284%. False negtative is 0.000000%.
+RMS error for 09_Jesus_saxphone.RESYN.csv is 99.85 cents. False positive is 7.112527%. False negtative is 0.000000%.
+RMS error for 09_Jesus_violin.RESYN.csv is 89.81 cents. False positive is 9.855072%. False negtative is 0.000000%.
+RMS error for 10_NunBitten_clarinet.RESYN.csv is 76.45 cents. False positive is 7.881773%. False negtative is 0.000000%.
+RMS error for 10_NunBitten_saxphone.RESYN.csv is 108.47 cents. False positive is 8.808290%. False negtative is 0.000000%.
+RMS error for 10_NunBitten_violin.RESYN.csv is 141.80 cents. False positive is 18.620690%. False negtative is 0.000000%.
+
+overallErrCentRms
+120.88613815149968
+
+overallPfp
+0.08827115337722506
+
+overallPfn
+6.30960605974566e-06

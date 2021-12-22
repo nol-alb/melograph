@@ -1,0 +1,8 @@
+Name,Precision,Recall,F1,OverlapRatio
+scale-chromatic-8octaves-leg.txt,0.9375,0.9375,0.9375,0.91712
+scale-chromatic-8octaves-stac.txt,0.75,0.75,0.75,0.384139
+scale-chromatic-8octaves-ten.txt,0.958333,0.958333,0.958333,0.853579
+scale-chromatic-leg.txt,0.64,0.941176,0.761905,0.72961
+scale-chromatic-stac.txt,0.94,0.94,0.94,0.239297
+scale-chromatic-ten.txt,0.980392,1.0,0.990099,0.890884
+Mean,0.867704166667,0.921168166667,0.8896395,0.669104833333

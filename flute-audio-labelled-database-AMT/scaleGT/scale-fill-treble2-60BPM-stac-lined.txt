@@ -1,0 +1,7 @@
+# path scale-fill-treble2-60BPM-stac-lined.mid
+@resolution 960
+@format "#o #d #p"
+@track 1 Pista 1
+0.650000 0.185417 1108.730524
+1.578125 0.325000 1479.977691
+@track 2 Pista 2

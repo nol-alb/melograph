@@ -1,0 +1,7 @@
+# path scale-fill-treble2-120BPM-leg-lined.mid
+@resolution 960
+@format "#o #d #p"
+@track 1 Pista 1
+0.371875 0.463542 1108.730524
+0.835417 0.403125 1479.977691
+@track 2 Pista 2

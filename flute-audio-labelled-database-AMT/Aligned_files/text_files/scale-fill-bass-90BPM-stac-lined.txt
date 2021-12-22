@@ -1,0 +1,7 @@
+# path scale-fill-bass-90BPM-stac-lined.mid
+@resolution 960
+@format "#o #d #p"
+@track 1 Pista 1
+0.231250 0.339583 277.182631
+0.975000 0.227083 311.126984
+@track 2 Pista 2

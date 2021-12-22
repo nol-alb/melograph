@@ -1,0 +1,7 @@
+# path scale-fill-bass-60BPM-leg-lined.mid
+@resolution 960
+@format "#o #d #p"
+@track 1 Pista 1
+0.835417 0.975000 277.182631
+1.810417 1.272917 311.126984
+@track 2 Pista 2

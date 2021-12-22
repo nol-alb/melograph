@@ -1,0 +1,4 @@
+Name,Precision,Recall,F1,OverlapRatio
+minueto1.txt,1.0,0.400966,0.572414,1.0
+minueto2.txt,0.913979,0.598592,0.723404,0.651407
+Mean,0.9569895,0.499779,0.647909,0.8257035
