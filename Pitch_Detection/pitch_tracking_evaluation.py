@@ -136,8 +136,8 @@ def run_on_file(path, blockSize, hopSize):
 if __name__ == '__main__':
     
     # # Run Evaluation for the Bach dataset # #
-    pathGTBachFolder = 'C:/Users/thiag/Documents/Github/melograph/Bach10-mf0-synth/annotation_stems'
-    pathAudioBachFolder = 'C:/Users/thiag/Documents/Github/melograph/Bach10-mf0-synth/audio_stems'
+    pathGTBachFolder = 'D:/Doutorado/Gatech/MDB-stem-synth/annotation_stems'
+    pathAudioBachFolder = 'D:/Doutorado/Gatech/MDB-stem-synth/audio_stems'
     [overallErrCentRms, overallPfp, overallPfn] = run_evaluation_Bach(pathAudioBachFolder,pathGTBachFolder)
    
     # # Run Evaluation for the Flute dataset # #
